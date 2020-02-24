@@ -71,3 +71,4 @@ gem "font-awesome-sass"
 gem 'erb2haml' 
 gem 'pry-rails'
 gem 'haml-rails' 
+gem 'fog-aws'
