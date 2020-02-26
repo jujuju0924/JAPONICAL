@@ -1,21 +1,18 @@
-* {
-  box-sizing: border-box;
-  text-decoration: none;
-}
 
 
-
-
-.header{background-color:green;
-        height:50px;
-        display:flex;
-        justify-content: space-between;
-        padding-left:100px;
-        padding-right:100px;
-
-  &__main{
-   &__content{
-
+.contents{
+    background-color: chartreuse;
+  &__row{
+    text-align:center;
+    width:900px;
+    margin:0 auto;
+    box-shadow:5px 5px 10px;
+     border:1px solid #000;
+    &__include{
+      box-sizing: border-box;
+      background-size:cover;
+      background-color:white;
+      width:900px;
+    }
   }
- }
 }

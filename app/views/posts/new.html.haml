@@ -1,4 +1,15 @@
-= form_for @post do |f|
-    = f.label :text, "レビュー"
-    = f.text_field :text
-    = f.submit "Send"
+.contents    
+    .contents__row
+        .contents__row__include
+            旅行先で出会った商品を投稿してみましょう
+            = form_for @post do |f|
+                .contents__row__include__name
+                = f.text_area :name, class:"product-name",placeholder: "題名"
+                .contents__row__include__name__address
+                = f.text_area :address, class:"product-name",placeholder: "住所"
+                .contents__row__include__name__address__image
+                = f.file_field :image, placeholder: "Image"
+                .contents__row__include__name__address__image__text
+                = f.text_area :text, placeholder: "あなたのオススメ品の良いところをお書きください" , rows: "5"
+                .contents__row__include__name__address__image__text__form
+                =f.submit "SEND" 
