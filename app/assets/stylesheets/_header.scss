@@ -5,18 +5,17 @@
 
 
 
-.footer{background-color: burlywood;
-        height:100px;
-        bottom: 0; 
+
+.header{background-color:green;
+        height:50px;
         display:flex;
         justify-content: space-between;
         padding-left:100px;
         padding-right:100px;
-        
-    &__image{
-      &__content{
-        &__name{
-        }
-      }
-    }
+
+  &__main{
+   &__content{
+
   }
+ }
+}
