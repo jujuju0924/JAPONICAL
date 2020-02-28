@@ -6,7 +6,7 @@
 .top__category__1__main
   - @posts.each do |post|
     .top__category__1__main__item 
-      = link_to root_path do
+      = link_to user_path(:id) do
         .top__category__1__main__item__box
           .top__category__1__main__item__box__image
             = image_tag "#{post.image}",size:"250x200"
