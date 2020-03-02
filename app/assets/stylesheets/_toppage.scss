@@ -1,10 +1,10 @@
 .top__category{
+  padding-top:60px;
+  padding-bottom:60px;
   position:relative;
-  height: 630px;
   width:100vw;
-  background-color:#f5f5f5;
   &__1{
-    padding:42px 202.5px 100px;
+    padding:30px 30px;
     &__new{
       font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
       display: flex;
@@ -20,12 +20,13 @@
       }
     }
     &__main{
-      height: 275px;
+      display: flex;
+      justify-content: space-between;
       flex-wrap: wrap;
       display: flex;
       &__item{
         padding: 10px;
-        width: 20%;
+        width: 30%;
         height: 100%;
         box-sizing: border-box;
         border: 1px solid transparent;
@@ -33,7 +34,7 @@
           width:100%;
           height: 100%;
           background-color: #fff;
-          box-shadow: 0 2px 4px rgba(0,0,0,.18);
+          box-shadow: 5px 10px 20px rgba(0,0,0,0.25);
           &__image{
             height: 75%;
             position: relative;
@@ -81,5 +82,8 @@
         }
       }
     }
+  }
+  .content-middle-image{
+
   }
 }
