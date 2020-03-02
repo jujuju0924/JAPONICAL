@@ -2,7 +2,7 @@
   .top__category__1__main
     - @posts.each do |post|
       .top__category__1__main__item 
-        = link_to user_path(current_user.id) do
+        = link_to post_path(post.id) do
           .top__category__1__main__item__box
             .top__category__1__main__item__box__image
               = image_tag "#{post.image}",size:"410x250",class: "content-middle-image"
