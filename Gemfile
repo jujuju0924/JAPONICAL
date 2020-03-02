@@ -72,3 +72,7 @@ gem 'erb2haml'
 gem 'pry-rails'
 gem 'haml-rails' 
 gem 'fog-aws'
+gem "gmaps4rails"
+gem "geocoder"
+gem "gon"
+gem "dotenv-rails"
