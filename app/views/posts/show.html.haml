@@ -1,16 +1,28 @@
 .show
   .show__content
     .show__content__image
-    = image_tag "#{@post.image}",size:"500x500",class: "content-middle-image"
+    = image_tag "#{@post.image}",size:"800x400",class: "content-middle-image"
   .show__title
     .show__title__text
       .show__title__text__explain
         .tab-wrap
+
           %input#TAB-01.tab-switch{:checked => "checked", :name => "TAB", :type => "radio"}/
           %label.tab-label{:for => "TAB-01"} 
             =icon('fas','smile')
           .tab-content
             = @post.name
+            .show__under_all__destroy
+              = link_to post_path(@post.id),method: :delete ,class: "mypage-image" do
+                =icon('fas','trash-alt')
+            .show__under__all__destroy__edit
+              = link_to edit_post_path(@post.id),method: :get,class: "mypage-age" do
+                =icon('fas','edit')
+
+
+
+
+
           %input#TAB-02.tab-switch{:name => "TAB", :type => "radio"}/
           %label.tab-label{:for => "TAB-02"} 
             =icon('fas','map-marker')
@@ -32,8 +44,10 @@
                       handler.getMap().setZoom(17);
                     });
 
+
+
           %input#TAB-03.tab-switch{:name => "TAB", :type => "radio"}/
           %label.tab-label{:for => "TAB-03"} 
             %i.far.fa-heart
           .tab-content
-            
+            いいねはまだありません

@@ -2,26 +2,31 @@
   .header__main
     .header__main__content
       .header__main__content__left
-        = link_to "japannn", root_path, class: ""
+        = link_to "日本のミヤゲ", root_path, class: ""
   .header__main__search
     .header__main__search__input
       .header__main__search__input__icon
         あああああああああ
-  - if user_signed_in?
-    .header__main__logout
-      .header__main__logout__content
-        .header__main__logout__content__right
-          = link_to "ログアウト", destroy_user_session_path, method: :delete, class: ""
-    .header__main__post
-      .header__main__post__content
-        .header__main__post__content__right
-          = link_to "投稿する", new_post_path, class: ""
-  - else
-    .header__main__login
-      .header__main__login__content
-        .header__main__login__content__right
-          = link_to "ログイン", new_user_session_path, class: ""
-    .header__main__new
-      .header__main__new__content
-        .header__main__new__content__right
-          = link_to "新規登録", new_user_registration_path, class: ""
+    .header_main_ham
+      #ham-menu
+        - if user_signed_in?
+          .header__main__logout
+            .header__main__logout__content
+              .header__main__logout__content__right
+                = link_to "ログアウト", destroy_user_session_path, method: :delete, class: ""
+          .header__main__post
+            .header__main__post__content
+              .header__main__post__content__right
+                = link_to "投稿する", new_post_path, class: ""
+        - else
+          .header__main__login
+            .header__main__login__content
+              .header__main__login__content__right
+                = link_to "ログイン", new_user_session_path, class: ""
+          .header__main__new
+            .header__main__new__content
+              .header__main__new__content__right
+                = link_to "新規登録", new_user_registration_path, class: ""
+  
+      #menu-background
+    
