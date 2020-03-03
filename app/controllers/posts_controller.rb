@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @posts = Post.all
+    @posts = Post.includes(:user)
   end
 
   def new
@@ -12,11 +12,17 @@ class PostsController < ApplicationController
 
   def create
     Post.create(post_params)
+    if Post.create
+      redirect_to root_path
+    else
+      redirect_to new_post_path
+    end
   end
 
   def destroy
     post = Post.find(params[:id])
     post.destroy
+    redirect_to root_path
   end
 
   def edit
@@ -25,6 +31,7 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     post.update(post_params)
+    redirect_to root_path
   end
 
   def show
