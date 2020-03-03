@@ -1,9 +1,82 @@
-.show{background-color:red;
+.show{
       height: 900px;
-  &__all{
-      
-    &__content{
+  &__content{
+    text-align:center;
+    width:800px;
+    margin:0 auto;
+    padding-top:40px;
+    &__image{
         
     }
   }
+
+
+  &__title{
+    &__text{
+    text-align:center;
+    width:800px;
+    margin:0 auto;
+    
+      &__explain{
+        justify-content: center;
+        
+      }
+        .tab-wrap {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          
+        }
+        
+        .tab-label {
+          color: White;
+          background: LightGray;
+          margin-right: 5px;
+          padding: 3px 12px;
+          order: -1;
+          
+        }
+        
+        .tab-content {
+          width: 100%;
+          display: none;
+          padding-top:20px;
+          
+        }
+        
+        /* アクティブなタブ */
+        
+        .tab-switch {
+          &:checked + .tab-label {
+            background: DeepSkyBlue;
+        
+            + .tab-content {
+              display: block;
+            }
+          }
+        
+          display: none;
+        }
+        
+        /* ラジオボタン非表示 */
+       
+
+      
+
+      
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

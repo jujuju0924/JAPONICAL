@@ -1,12 +1,39 @@
-.top__category  
-  .top__category__1__main
-    .top__category__1__main__item 
-      .top__category__1__main__item__box
-        .top__category__1__main__item__box__image
-          = image_tag "#{@post.image}",size:"410x250",class: "content-middle-image"
-          .top__category__1__main__item__box__image__price
+.show
+  .show__content
+    .show__content__image
+    = image_tag "#{@post.image}",size:"500x500",class: "content-middle-image"
+  .show__title
+    .show__title__text
+      .show__title__text__explain
+        .tab-wrap
+          %input#TAB-01.tab-switch{:checked => "checked", :name => "TAB", :type => "radio"}/
+          %label.tab-label{:for => "TAB-01"} 
+            =icon('fas','smile')
+          .tab-content
             = @post.name
-        .top__category__1__main__item__box__text
-          .top__category__1__main__item__box__text__content
-            = @post.name
-            .top__category__1__main__item__box__text__hidden
+          %input#TAB-02.tab-switch{:name => "TAB", :type => "radio"}/
+          %label.tab-label{:for => "TAB-02"} 
+            =icon('fas','map-marker')
+          .tab-content
+            %div{:style => "width: ;"}
+              #map{:style => "width: 100%; height: 300px;"}
+              :javascript
+                handler = Gmaps.build('Google');
+                    handler.buildMap({ provider: { scrollwheel: false }, internal: {id: 'map'}}, function(){
+                      markers = handler.addMarkers([
+                        {
+                          "lat": #{@post.latitude},
+                          "lng": #{@post.longitude},
+                      "infowindow": '<p>#{@post.name}</p><p>#{@post.address}</p><p>#{link_to "Googleマップで見る" ,"https://maps.google.co.jp/maps?q=loc:\#{@post.latitude},\#{@post.longitude}&iwloc=J",target: "_blank"}</p>'
+                        }
+                      ]);
+                      handler.bounds.extendWith(markers);
+                      handler.fitMapToBounds();
+                      handler.getMap().setZoom(17);
+                    });
+
+          %input#TAB-03.tab-switch{:name => "TAB", :type => "radio"}/
+          %label.tab-label{:for => "TAB-03"} 
+            %i.far.fa-heart
+          .tab-content
+            
