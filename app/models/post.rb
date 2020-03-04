@@ -7,4 +7,12 @@ class Post < ApplicationRecord
   geocoded_by :address
   after_validation :geocode
 
+  def self.search(search)
+    if search
+      Post.where('text LIKE(?)', "%#{search}%")
+    else
+      Post.all
+    end
+  end
+
 end
