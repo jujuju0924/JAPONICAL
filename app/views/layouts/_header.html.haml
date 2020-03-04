@@ -3,10 +3,16 @@
     .header__main__content
       .header__main__content__left
         = link_to "JAPONICAL", root_path, class: "header-text"
-  .header__main__search
-    .header__main__search__input
-      .header__main__search__input__icon
-        あああああああああ
+  .header__search
+    .header__search__input
+      .header__search__input__icon
+        .search
+          = form_tag posts_searches_path, method: :get , class: 'header-main__search-bar1__text__form' do
+            = text_field_tag :search, '', placeholder: '何かお探しですか？'
+            = label_tag '', class: 'header-main__search-bar1__text__box' do
+              = icon('fas', 'search', class: 'header-main__search-bar1__text__box__image')
+              = submit_tag 'Search', class: 'header-main__search-bar1__text__box__hidden'
+
     .header_main_ham
       #ham-menu
         - if user_signed_in?
