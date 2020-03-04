@@ -12,12 +12,13 @@
             =icon('fas','smile')
           .tab-content
             = @post.name
-            .show__under_all__destroy
-              = link_to post_path(@post.id),method: :delete ,class: "mypage-image" do
-                =icon('fas','trash-alt')
-            .show__under__all__destroy__edit
-              = link_to edit_post_path(@post.id),method: :get,class: "mypage-age" do
-                =icon('fas','edit')
+            .show__under
+              .show__under__destroy
+                = link_to post_path(@post.id),method: :delete ,class: "mypage-image" do
+                  =icon('fas','trash-alt')
+              .show__under__destroy__edit
+                = link_to edit_post_path(@post.id),method: :get,class: "mypage-age" do
+                  =icon('fas','edit')
 
 
 
