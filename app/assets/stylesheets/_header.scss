@@ -1,12 +1,13 @@
 * {
   box-sizing: border-box;
   text-decoration: none;
+  font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
 }
 
 
 
 
-.header{background-color:green;
+.header{background-color:white;
         height:50px;
         width:100%;
         display:flex;
@@ -75,7 +76,10 @@
   z-index: 999;
 }
 
-
+.header-text{
+  font-size:30px;
+  font-weight:bold;
+}
 
 
 
