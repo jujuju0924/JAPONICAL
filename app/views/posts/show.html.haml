@@ -51,4 +51,5 @@
           %label.tab-label{:for => "TAB-03"} 
             %i.far.fa-heart
           .tab-content
-            いいねはまだありません
+            %div{id: "like-#{@post.id}"}
+              = render "likes/like", post: @post

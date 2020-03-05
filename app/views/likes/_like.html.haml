@@ -1,0 +1,13 @@
+- if user_signed_in?
+  - if Like.find_by(user_id: current_user.id, post_id: post.id)
+    = link_to post_like_path(post_id: post.id, id: post.likes[0].id), method: :delete, remote: true do
+      %i{class: "fas fa-heart"}
+  - else
+    = link_to post_likes_path(post), method: :post, remote: true do
+      %i{class: "far fa-heart"}
+  = post.likes.length
+- else
+%i{class: "far fa-heart"}
+  = post.likes.length
+
+  
