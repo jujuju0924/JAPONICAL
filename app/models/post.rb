@@ -6,6 +6,8 @@ class Post < ApplicationRecord
   belongs_to :user
   geocoded_by :address
   after_validation :geocode
+  has_many :likes
+
 
   def self.search(search)
     if search
