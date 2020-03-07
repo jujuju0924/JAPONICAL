@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  acts_as_taggable
   mount_uploader :image, ImagesUploader
   validates :name, presence: true
   validates :address, presence: true

@@ -11,5 +11,8 @@
                 = f.file_field :image, placeholder: "Image"
                 .contents__row__include__name__address__image__text
                 = f.text_area :text, placeholder: "あなたのオススメ品の良いところをお書きください" , rows: "5"
+                .form-group 
+                = f.label :tag_list
+                = f.text_field :tag_list
                 .contents__row__include__name__address__image__text__form
                 =f.submit "SEND" 
