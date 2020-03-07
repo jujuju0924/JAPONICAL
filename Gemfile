@@ -76,3 +76,4 @@ gem "gmaps4rails"
 gem "geocoder"
 gem "gon"
 gem "dotenv-rails"
+gem 'acts-as-taggable-on', '~> 6.0'
