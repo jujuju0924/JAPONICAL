@@ -3,16 +3,53 @@
 
 .header{background-color:white;
         width:100%;
-        padding-left:100px;
-        padding-right:100px;
+        padding: 20px 100px 10px;
         display: flex;
-        justify-content:space-around;
+        justify-content: space-between;
+
     
   &__main{
        display: flex;
        justify-content: space-between;
-       
-       
   }
 
+  .search__tag{
+    position:relative;
+    width:200px;
+  #search{
+    padding:0 10px; 
+    position:absolute; 
+    height:35px;
+    left:0;
+    top:0; 
+    border-radius:25px;
+    outline:0;
+    background:#eee;
+    width: 300px;
+  }
+    label.search__tag__text{
+      width:50px;	
+      height:35px;
+      position:absolute; 
+      left:280px; 
+      top:0;
+      background:#7fbfff;
+      color:#fff;
+      border:none;
+      border-radius:0 25px 25px 0;
+      padding-top:5px;
+      text-align: center;
+      
+    input.search__tag__text__box__image{
+      display: none;
+
+    }
+
+    }
+    
+   
+  }
+
+
+    
 }
