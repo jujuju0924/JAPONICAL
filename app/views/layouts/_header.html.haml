@@ -1,7 +1,7 @@
 .header
-  .header__main
-    .header__main__content
-      .header__main__content__left
+  .header__left
+    .header__left__content
+      .header__left__content__text
         = link_to image_tag("logoa.jpg",size:"200x50", class:"content-all__right__image-images"), root_path
   .header__search
     .header__search__input
@@ -13,26 +13,39 @@
               = icon('fas', 'search', class: 'header-main__search-bar1__text__box__image')
               = submit_tag 'Search', class: 'header-main__search-bar1__text__box__hidden'
 
-    .header_main_ham
-      #ham-menu
-        - if user_signed_in?
-          .header__main__logout
-            .header__main__logout__content
-              .header__main__logout__content__right
-                = link_to "ログアウト", destroy_user_session_path, method: :delete, class: ""
-          .header__main__post
-            .header__main__post__content
-              .header__main__post__content__right
-                = link_to "投稿する", new_post_path, class: ""
-        - else
-          .header__main__login
-            .header__main__login__content
-              .header__main__login__content__right
-                = link_to "ログイン", new_user_session_path, class: ""
-          .header__main__new
-            .header__main__new__content
-              .header__main__new__content__right
-                = link_to "新規登録", new_user_registration_path, class: ""
-  
-      #menu-background
-    
+  .header__main
+    - if user_signed_in?
+      .header__main__logout
+        .header__main__logout__content
+          .header__main__logout__content__right
+            = link_to destroy_user_session_path, method: :delete, class: "" do
+              =icon('fas','sign-out-alt')
+              ログアウト
+
+      .header__main__post
+        .header__main__post__content
+          .header__main__post__content__right
+            = link_to new_post_path, class: "" do
+              =icon('fas','paper-plane')
+              投稿する
+
+      .header__main__post
+        .header__main__post__content
+          .header__main__post__content__right
+            
+    - else
+      .header__main__login
+        .header__main__login__content
+          .header__main__login__content__right
+            = link_to new_user_session_path, class: "" do
+              =icon('fas','sign-in-alt')
+              ログイン
+              
+      .header__main__new
+        .header__main__new__content
+          .header__main__new__content__right
+            = link_to new_user_registration_path, class: "" do
+              =icon('fas','user-alt')
+              新規登録
+
+     
