@@ -20,10 +20,18 @@
       }
     }
     &__main{
-      display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
       display: flex;
+      flex-direction: row;
+      justify-content:space-between ;
+      &:after {
+        content: "";
+        display: block;
+        height: 0;
+        width:30%;
+        }
+
+  
       &__item{
         padding: 10px;
         width: 30%;
