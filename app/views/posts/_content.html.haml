@@ -1,6 +1,31 @@
-.content__main
-  .content__main__image
-    .content__main__image__row
-      = image_tag("knife-2496853_1920",size:"",class:"content__main__image__row__up")
-      .content__main__image__row__up__text
-        まだ見た事がない地方のお土産を紹介しよう
+- if user_signed_in?
+  .gmap
+    .gmap__detail
+      .gmap__detail__text
+        %div{:style => "width: 100%;"}
+          #map{:style => "width: 100%; height: 400px;"}
+        - @post.each do |post|
+          :javascript
+              handler = Gmaps.build('Google');
+              handler.buildMap({ provider: { scrollwheel: false }, internal: {id: 'map'}}, function(){
+                markers = handler.addMarkers([
+                  {
+                    "lat": #{post.latitude},
+                    "lng": #{post.longitude},
+                "infowindow": '<p>#{post.name}</p><p>#{post.address}</p><p>#{link_to "Googleマップで見る" ,"https://maps.google.co.jp/maps?q=loc:\#{post.latitude},\#{post.longitude}&iwloc=J",target: "_blank"}</p>'
+                  }
+                ]);
+                handler.bounds.extendWith(markers);
+                handler.fitMapToBounds();
+                handler.getMap().setCenter(new google.maps.LatLng(39, 140));
+                handler.getMap().setZoom(4.7);
+              });
+
+
+- else
+  .content__main
+    .content__main__image
+      .content__main__image__row
+        = image_tag("knife-2496853_1920",size:"",class:"content__main__image__row__up")
+        .content__main__image__row__up__text
+          まだ見た事がない地方のお土産を紹介しよう

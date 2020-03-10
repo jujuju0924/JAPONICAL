@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(9)
     @tags = Post.all.includes(:tags)
+    @post = Post.all
     
   end
 
@@ -33,7 +34,7 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     post.update(post_params)
-    redirect_to root_path
+    redirect_to post_path
   end
 
   def show
