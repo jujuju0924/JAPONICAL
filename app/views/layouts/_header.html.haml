@@ -32,12 +32,16 @@
       .header__main__post
         .header__main__post__content
           .header__main__post__content__right
-          = link_to 'マイページ', user_path(:id)
+            = link_to user_path(:id) do
+              =icon('fas','road')
+              マイページ
     - else
       .header__main__post
         .header__main__post__content
           .header__main__post__content__right
-          = link_to 'ゲストログイン', users_guest_sign_in_path, method: :post
+            = link_to users_guest_sign_in_path, method: :post do
+              =icon('fas','user-circle')
+              簡単ログイン
 
       .header__main__login
         .header__main__login__content
