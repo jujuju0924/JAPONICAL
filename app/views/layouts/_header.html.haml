@@ -34,6 +34,11 @@
           .header__main__post__content__right
             
     - else
+      .header__main__post
+        .header__main__post__content
+          .header__main__post__content__right
+          = link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post
+
       .header__main__login
         .header__main__login__content
           .header__main__login__content__right
