@@ -51,22 +51,13 @@
               position: absolute;
               color:white;
               padding: 0 12px;
-              line-height: 27.5px;
+              line-height: 32.5px;
               bottom: 10px;
-              border-radius: 0 14px 14px 0;
+            
               height:15%;
               width: auto;
               background: rgba(0,0,0,.4);
-            }
-            &__text{
-              position: absolute;
-              top: 30px;
-              font-size: 32px;
-              background-color: red;
-              color: white;
-              transform: rotate(-15deg);
-              -moz-transform: rotate(-15deg);
-              -webkit-transform: rotate(-15deg);
+              
             }
           }
           &__text{
@@ -80,8 +71,7 @@
             }
             &__hidden{
               background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff 72%);
-              height: 50%;
-              width: 50%;
+              height: 90%;
               position: absolute;
               bottom: 0;
               right: 0;

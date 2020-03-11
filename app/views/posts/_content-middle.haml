@@ -7,11 +7,13 @@
             .top__category__1__main__item__box__image
               = image_tag "#{post.image}",size:"410x250",class: "content-middle-image"
               .top__category__1__main__item__box__image__price
-                = post.name
+                = post.user.name
             .top__category__1__main__item__box__text
               .top__category__1__main__item__box__text__content
-                = post.text
+                = post.name
                 .top__category__1__main__item__box__text__hidden
+                  = icon('fas', 'far fa-heart', class: '')
+                  = post.likes.length
                 
                 
   .page

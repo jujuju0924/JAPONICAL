@@ -7,6 +7,7 @@ class PostsController < ApplicationController
     @tags = Post.all.includes(:tags)
     @post = Post.all
     
+    
   end
 
   def new
