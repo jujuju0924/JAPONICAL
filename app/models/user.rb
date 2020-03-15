@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :posts,dependent: :destroy
   accepts_nested_attributes_for :posts
   has_many :likes
+  validates :name, presence: true
 
   def self.guest
   find_or_create_by!(name: 'guest',email: 'guest@example.com') do |user|
