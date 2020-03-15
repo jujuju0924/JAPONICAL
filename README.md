@@ -1,10 +1,8 @@
 # JAPONICAL
 
-全国の知られていないお土産を投稿し、googlemap上で何県のお土産なのかが
-わかるサービスです。
+全国の知られていないお土産を投稿し、googlemap上で何県のお土産なのかがわかるサービスです。
 
-
-
+[![Image from Gyazo](https://i.gyazo.com/12f9d51897ff4182af81738a16a28e7a.jpg)](https://gyazo.com/12f9d51897ff4182af81738a16a28e7a)
 
 # URL
 http://3.115.70.84/
