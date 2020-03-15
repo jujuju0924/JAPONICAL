@@ -3,7 +3,7 @@
 全国の知られていないお土産を投稿し、googlemap上で何県のお土産なのかが
 わかるサービスです。
 
-https://i.gyazo.com/5989c8a4717e09446f47001702409354.gif
+
 
 
 # URL
@@ -43,5 +43,5 @@ http://3.115.70.84/
 * タグ機能(現段階では登録のみ、acts-as-taggable-on)
 * 検索機能
 * ページネーション機能(kaminari)
-* 住所&経度・緯度取得機能(geocoder)
-* 地図表示機能(Maps JavaScript API)
+* 住所&経度・緯度取得機能(geocoder)　　
+* 地図表示機能(Maps JavaScript API) 
