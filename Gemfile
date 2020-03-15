@@ -78,3 +78,5 @@ gem "geocoder"
 gem "gon"
 gem "dotenv-rails"
 gem 'acts-as-taggable-on', '~> 6.0'
+gem 'rails-i18n', '~> 5.1'
+gem 'devise-i18n'
