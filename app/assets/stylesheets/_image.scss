@@ -1,6 +1,5 @@
-.content__main{
-  &__image{
-
+@media screen and (min-width: 1024px) {
+  .content__main{
     &__row{
       position: relative;
       &__up{
