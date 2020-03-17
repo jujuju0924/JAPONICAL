@@ -7,8 +7,8 @@
       .show__title__text__explain
         .tab-wrap
 
-          %input#TAB-01.tab-switch{:checked => "checked", :name => "TAB", :type => "radio"}/
-          %label.tab-label{:for => "TAB-01"} 
+          %input#TAB-01.tab-switch{checked: "checked", name: "TAB", type: "radio"}/
+          %label.tab-label{for: "TAB-01"} 
             =icon('fas','smile')
           .tab-content
             = @post.name
@@ -28,12 +28,12 @@
 
 
 
-          %input#TAB-02.tab-switch{:name => "TAB", :type => "radio"}/
-          %label.tab-label{:for => "TAB-02"} 
+          %input#TAB-02.tab-switch{name: "TAB", type: "radio"}/
+          %label.tab-label{for: "TAB-02"} 
             =icon('fas','map-marker')
           .tab-content
-            %div{:style => "width: ;"}
-              #map{:style => "width: 100%; height: 300px;"}
+            %div{style: "width: ;"}
+              #map{style: "width: 100%; height: 300px;"}
               :javascript
                       handler = Gmaps.build('Google');
                       
@@ -54,8 +54,8 @@
 
 
 
-          %input#TAB-03.tab-switch{:name => "TAB", :type => "radio"}/
-          %label.tab-label{:for => "TAB-03"} 
+          %input#TAB-03.tab-switch{name: "TAB", type: "radio"}/
+          %label.tab-label{for: "TAB-03"} 
             %i.far.fa-heart
           .tab-content
             %div{id: "like-#{@post.id}"}
