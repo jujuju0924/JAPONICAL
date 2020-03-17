@@ -364,7 +364,7 @@ DEPENDENCIES
   dotenv-rails
   erb2haml
   factory_bot_rails
-  faker
+  faker (~> 2.8)
   fog-aws
   font-awesome-sass
   geocoder
