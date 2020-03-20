@@ -2,7 +2,7 @@
     .contents__row
         .contents__row__include
             旅行先で出会った商品を投稿してみましょう
-            = form_for @post do |f|
+            = form_with @post do |f|
                 .contents__row__include__name
                 = f.text_field :name, class:"product-name",placeholder: "題名",id:"name"
                 .contents__row__include__name__address

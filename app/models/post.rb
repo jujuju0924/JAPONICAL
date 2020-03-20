@@ -8,7 +8,7 @@ class Post < ApplicationRecord
   geocoded_by :address
   after_validation :geocode,if: :address_changed?
   has_many :likes, dependent: :destroy
-
+  has_many :comments
 
   def self.search(search)
     if search

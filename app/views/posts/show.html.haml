@@ -23,6 +23,20 @@
                 .show__under__two__which__destroy__edit
                   = link_to edit_post_path(@post.id),method: :get,class: "mypage-edit" do
                     =icon('fas','edit')
+            .show-comment
+              - if current_user
+                = form_with(model: [@post, @comment], local: true) do |form|
+                  = form.text_area :text, placeholder: "コメントする", rows: "2"
+                  = form.submit "SEND"
+              - else
+                ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+            .show-comment__user
+              コメント一覧
+              - if @comments
+                - @comments.each do |comment|
+                  = link_to comment.user.name, "/users/#{comment.user_id}"
+                  = comment.text
+      
 
 
 
