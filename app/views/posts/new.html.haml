@@ -4,14 +4,14 @@
             旅行先で出会った商品を投稿してみましょう
             = form_for @post do |f|
                 .contents__row__include__name
-                = f.text_field :name, class:"product-name",placeholder: "題名"
+                = f.text_field :name, class:"product-name",placeholder: "題名",id:"name"
                 .contents__row__include__name__address
-                = f.text_field :address, class:"product-name",placeholder: "例 東京都渋谷区"
+                = f.text_field :address, class:"product-name",placeholder: "例 東京都渋谷区", id:"address"
                 .contents__row__include__name__address__image
-                = f.file_field :image, placeholder: "Image"
+                = f.file_field :image, placeholder: "Image" ,id:"image"
                 .contents__row__include__name__address__image__text
-                = f.text_field :text, class:"product-name__express",placeholder: "あなたのオススメ品の良いところをお書きください" , rows: "5"
+                = f.text_field :text, class:"product-name__express",placeholder: "あなたのオススメ品の良いところをお書きください" , rows: "5",id:"text"
                 .form-group 
-                = f.text_field :tag_list,class:"product-name",placeholder: "好きなタグを入れてください"
+                = f.text_field :tag_list,class:"product-name",placeholder: "好きなタグを入れてください", id:"tag_list"
                 .contents__row__include__name__address__image__text__form
                 = f.submit "投稿する", class: 'btn'
