@@ -25,9 +25,10 @@
                     =icon('fas','edit')
             .show-comment
               - if current_user
-                = form_with(model: [@post, @comment], local: true) do |form|
-                  = form.text_area :text, placeholder: "コメントする", rows: "3"
-                  = form.submit "SEND"
+                .show-comment__detail
+                  = form_with(model: [@post, @comment], local: true) do |form|
+                    = form.text_area :text, placeholder: "コメントする", rows: "3"
+                    = form.submit "SEND"
               - else
                 ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
             .show-comment__user
