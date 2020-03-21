@@ -41,6 +41,8 @@ class PostsController < ApplicationController
   def show
     @lat = @post.latitude
     @lng = @post.longitude
+    gon.lat = @lat
+    gon.lng = @lng
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
   end
