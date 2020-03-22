@@ -1,5 +1,5 @@
 .show{
-      height: 1000px;
+      height: 100%;
   &__content{
     text-align:center;
     width:800px;
@@ -76,6 +76,16 @@
        .mypage-edit{
         padding-left:5px;
        }
+      }
     }
-  }
+
+   .show-comment{
+    &__detail{
+      &__form{
+
+       }
+      }
+     }
+
+
 }
