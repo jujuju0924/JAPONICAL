@@ -27,21 +27,18 @@
               - if current_user
                 .show-comment__detail
                   = form_with(model: [@post, @comment], local: true) do |form|
-                    = form.text_area :text, placeholder: "コメントする", rows: "3"
-                    = form.submit "SEND"
+                    = form.text_area :text, placeholder: "コメントする", cols: "80",rows: "5",class: "show-comment_detail__form"
+                    = form.submit "SEND",class: "show-comment_detail__form__submit"
               - else
                 ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
-            .show-comment__user
+            .show-comment_detail__form__submit__under
               コメント一覧
               - if @comments
                 - @comments.each do |comment|
-                  = link_to comment.user.name, "/users/#{comment.user_id}"
-                  = comment.text
+                  .show-comment_detail__form__submit__under__name
+                    = comment.user.name
+                    = comment.text
       
-
-
-
-
 
           %input#TAB-02.tab-switch{name: "TAB", type: "radio"}/
           %label.tab-label{for: "TAB-02"} 
