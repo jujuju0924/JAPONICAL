@@ -2,6 +2,14 @@
   .show__content
     .show__content__image
     = image_tag "#{@post.image}",size:"800x400",class: "content-middle-image"
+    - if user_signed_in? && current_user.id == @post.user_id
+      .show__content__image__two
+        .show__content__image__two__des
+          = link_to post_path(@post.id),method: :delete ,class: "mypage-image" do
+            =icon('fas','trash-alt')
+        .show__content__image__two__des__edit
+          = link_to edit_post_path(@post.id),method: :get,class: "mypage-edit" do
+            =icon('fas','edit')
   .show__title
     .show__title__text
       .show__title__text__explain
@@ -14,29 +22,20 @@
             = @post.name
             .show__under
             = @post.text
-            .show__under__two
-            - if user_signed_in? && current_user.id == @post.user_id
-              .show__under__two__which
-                .show__under__two__which__destroy
-                  = link_to post_path(@post.id),method: :delete ,class: "mypage-image" do
-                    =icon('fas','trash-alt')
-                .show__under__two__which__destroy__edit
-                  = link_to edit_post_path(@post.id),method: :get,class: "mypage-edit" do
-                    =icon('fas','edit')
             .show-comment
               - if current_user
                 .show-comment__detail
                   = form_with(model: [@post, @comment], local: true) do |form|
-                    = form.text_area :text, placeholder: "コメントする", cols: "80",rows: "5",class: "show-comment_detail__form"
-                    = form.submit "SEND",class: "show-comment_detail__form__submit"
+                    = form.text_area :text, placeholder: "コメントする", cols: "90",rows: "5",class: "show-comment__detail__form"
+                    = form.submit "投稿する",class: "show-comment__detail__form__submit"
               - else
-                ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+                コメントの投稿には新規登録/ログインが必要です 
             .show-comment_detail__form__submit__under
               コメント一覧
               - if @comments
                 - @comments.each do |comment|
                   .show-comment_detail__form__submit__under__name
-                    = comment.user.name
+                    = comment.user.name 
                     = comment.text
       
 
