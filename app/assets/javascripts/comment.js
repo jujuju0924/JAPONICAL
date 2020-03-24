@@ -3,7 +3,6 @@ $(function(){
     var html = `<p>
                   <strong>
                     <a href=/users/${comment.user_id}>${comment.user_name}</a>
-                    ：
                   </strong>
                   ${comment.text}
                 </p>`
@@ -23,9 +22,9 @@ $(function(){
   })
   .done(function(data){
     var html = buildHTML(data);
-    $('.comments').append(html);
-    $('.textbox').val('');
-    $('.form__submit').prop('disabled', false);
+    $('.show-comment_detail__form__submit__under').append(html);
+    $('.show-comment__detail__form').val('');
+    $('.show-comment__detail__form__submit').prop('disabled', false);
   })
 })
 });
