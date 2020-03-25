@@ -53,7 +53,13 @@
           background: white;
           border-top: solid 5px #5d627b;
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-                
+          &__name{
+              font-size:20px;
+          
+            &__two{
+                font-size:15px;
+            }
+          }    
         }
         
         .tab-switch {
@@ -73,30 +79,32 @@
     }
 
    .show-comment{
-    &__detail{
-      &__form{
-        &__submit{
-          display: inline-block;
-          width: 150px;
-          background-color:blue;
-          font-size: 16px;
-          color: #FFF;
-          text-decoration: none;
-          font-weight: bold;
-          padding: 8px 16px 8px 16px;
-          border-radius: 4px;
-          position: relative;
-          height:50px;
-          margin-top:10px;
-            &:before{
-              position: absolute;
-              left: 16px;
-              top: 50%;
-              margin-top: -8px;
-            }
-                &:hover{
-                  opacity: 0.8;
-            }
+     padding:10px 0;
+      &__detail{
+        font-weight: 700px;
+        &__form{
+          &__submit{
+            display: inline-block;
+            width: 150px;
+            background-color:blue;
+            font-size: 16px;
+            color: #FFF;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 16px 8px 16px;
+            border-radius: 4px;
+            position: relative;
+            height:50px;
+            margin-top:10px;
+              &:before{
+                position: absolute;
+                left: 16px;
+                top: 50%;
+                margin-top: -8px;
+              }
+                  &:hover{
+                    opacity: 0.8;
+              }
             
         }
        }

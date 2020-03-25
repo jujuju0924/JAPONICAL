@@ -19,14 +19,15 @@
           %label.tab-label{for: "TAB-01"} 
             =icon('fas','smile')
           .tab-content
-            = @post.name
-            .show__under
-            = @post.text
+            .tab-content__name
+              = @post.name
+              .tab-content__name__two
+                = @post.text
             .show-comment
               - if current_user
                 .show-comment__detail
                   = form_with(model: [@post, @comment], local: true,id:"comment") do |form|
-                    = form.text_area :text, placeholder: "コメントする", cols: "90",rows: "5",class: "show-comment__detail__form"
+                    = form.text_area :text, placeholder: "コメントする", cols: "80",rows: "5",class: "show-comment__detail__form"
                     = form.submit "投稿する",class: "show-comment__detail__form__submit"
               - else
                 コメントの投稿には新規登録/ログインが必要です 
