@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(comment){
     var html = `<p>
                   <strong>
-                    <a href=/users/${comment.user_id}>${comment.user_name}</a>
+                    <a href=/users/>${comment.user_name}</a>
                   </strong>
                   ${comment.text}
                 </p>`
@@ -26,5 +26,8 @@ $(function(){
     $('.show-comment__detail__form').val('');
     $('.show-comment__detail__form__submit').prop('disabled', false);
   })
-})
+  .fail(function() {
+    alert('error');
+    });
+  })
 });
