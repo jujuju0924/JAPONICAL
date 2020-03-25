@@ -35,7 +35,7 @@
               - if @comments
                 - @comments.each do |comment|
                   .show-comment_detail__form__submit__under__name
-                    = link_to comment.user.name, "/users/#{comment.user_id}",class: "username"
+                    = comment.user.name
                     = comment.text
       
 
