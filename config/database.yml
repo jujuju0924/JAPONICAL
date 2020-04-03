@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: webapp_production
-  username: <%= Rails.application.credentials[:db_user] %>
-  password: <%= Rails.application.credentials[:db_pass] %>
+  host: <%= Rails.application.credentials.rds[:host] %>
+  database: <%= Rails.application.credentials.rds[:database] %>
+  username: <%= Rails.application.credentials.rds[:username] %>
+  password: <%= Rails.application.credentials.rds[:password] %>
