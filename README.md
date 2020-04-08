@@ -5,7 +5,7 @@
 [![Image from Gyazo](https://i.gyazo.com/12f9d51897ff4182af81738a16a28e7a.jpg)](https://gyazo.com/12f9d51897ff4182af81738a16a28e7a)
 
 # URL
-http://3.115.70.84/
+https://japonical.work/
 
 非ログイン時は投稿データのみを見る事ができます。
 簡単ログインのボタンを押す事でメールアドレスやユーザーネームを登録せずに投稿する事が可能です。
@@ -36,7 +36,7 @@ http://3.115.70.84/
 
 ## インフラ・開発環境等
 * Docker/docker-compose
-* AWS（EC2, S3）
+* AWS（VPC,EC2,S3,RDS,ALB,ACM,Route53）
 * RSpec
 
 ## 機能一覧
