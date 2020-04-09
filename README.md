@@ -53,4 +53,4 @@ https://japonical.work/
 * 地図表示機能(Maps JavaScript API) 
 
 ## アーキテクチャ図
-[![Image from Gyazo](https://i.gyazo.com/2b1fabbc942d2097c2441f833b33a3f6.png)](https://gyazo.com/2b1fabbc942d2097c2441f833b33a3f6)
+[![Image from Gyazo](https://i.gyazo.com/e2b0dcff5e962ecf5991765d9a5ad8fe.png)](https://gyazo.com/e2b0dcff5e962ecf5991765d9a5ad8fe)
