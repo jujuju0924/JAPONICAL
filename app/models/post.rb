@@ -6,7 +6,7 @@ class Post < ApplicationRecord
   validates :image, presence: true
   belongs_to :user
   geocoded_by :address
-  after_validation :geocode,if: :address_changed?
+  after_validation :geocode, if: :address_changed?
   has_many :likes, dependent: :destroy
   has_many :comments
 
@@ -17,5 +17,4 @@ class Post < ApplicationRecord
       Post.all
     end
   end
-
 end
