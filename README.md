@@ -51,3 +51,6 @@ https://japonical.work/
 * ページネーション機能(kaminari)
 * 住所&経度・緯度取得機能(geocoder)　　
 * 地図表示機能(Maps JavaScript API) 
+
+アーキテクチャ図
+
