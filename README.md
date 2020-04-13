@@ -54,3 +54,5 @@ https://japonical.work/
 
 ## アーキテクチャ図
 [![Image from Gyazo](https://i.gyazo.com/e2b0dcff5e962ecf5991765d9a5ad8fe.png)](https://gyazo.com/e2b0dcff5e962ecf5991765d9a5ad8fe)
+
+注　元々はEC2を２つ起動しておりましたが、一旦1つ起動にしております。
