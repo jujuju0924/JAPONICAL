@@ -52,8 +52,6 @@ group :development do
   gem 'rubocop', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  
-
 end
 
 group :test do
@@ -71,13 +69,13 @@ gem 'carrierwave'
 gem 'devise'
 gem 'devise-i18n'
 gem "dotenv-rails"
-gem 'erb2haml'   
+gem 'erb2haml'
 gem 'fog-aws'
 gem "font-awesome-sass"
 gem "geocoder"
 gem "gmaps4rails"
 gem "gon"
-gem 'haml-rails' 
+gem 'haml-rails'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'pry-rails'

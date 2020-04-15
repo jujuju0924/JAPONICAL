@@ -6,8 +6,6 @@ class PostsController < ApplicationController
     @posts = Post.includes(:user).order("created_at DESC").page(params[:page]).per(9)
     @tags = Post.all.includes(:tags)
     @post = Post.all
-    
-    
   end
 
   def new
@@ -29,8 +27,7 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     post = Post.find(params[:id])
@@ -46,17 +43,17 @@ class PostsController < ApplicationController
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
   end
-  
 
   private
+
   def post_params
-    params.require(:post).permit(:name,:text,:address,:image,:latitude,:longitude,:tag_list).merge(user_id: current_user.id)
+    params.require(:post).permit(:name, :text, :address, :image, :latitude, :longitude, :tag_list).merge(user_id: current_user.id)
   end
- 
+
   def set_post
     @post = Post.find(params[:id])
   end
-  
+
   def move_to_index
     redirect_to action: :index unless user_signed_in?
   end
