@@ -17,6 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
+gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 # gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -37,7 +38,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 3.5'
@@ -51,6 +52,8 @@ group :development do
   gem 'rubocop', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  
+
 end
 
 group :test do
@@ -68,15 +71,15 @@ gem 'carrierwave'
 gem 'devise'
 gem 'devise-i18n'
 gem "dotenv-rails"
-gem 'erb2haml'
+gem 'erb2haml'   
 gem 'fog-aws'
 gem "font-awesome-sass"
 gem "geocoder"
 gem "gmaps4rails"
 gem "gon"
-gem 'haml-rails'
+gem 'haml-rails' 
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'pry-rails'
 gem 'rails-i18n', '~> 5.1'
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
