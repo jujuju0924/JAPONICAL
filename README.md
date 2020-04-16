@@ -46,7 +46,8 @@ https://japonical.work/
 * 記事投稿、編集、削除機能
 * 画像投稿機能(carrierwave)
 * タグ機能(現段階では登録のみ、acts-as-taggable-on)
-* コメント機能（Ajax化）
+* コメント機能（Ajax）
+* いいね 機能（Ajax）
 * 検索機能
 * ページネーション機能(kaminari)
 * 住所&経度・緯度取得機能(geocoder)　　
