@@ -1,0 +1,11 @@
+.flash {
+  color:white;
+  text-align: center;
+  
+  &__alert{
+    background-color: red;
+  }
+  &__notice {
+    background: linear-gradient(-135deg, #E4A972, #9941D8);
+  }
+}
