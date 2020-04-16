@@ -16,3 +16,7 @@
 //= require_tree .
 //= require underscore
 //= require gmaps/google
+
+$(function(){
+  setTimeout("$('.flash').fadeOut('slow')", 2000);
+  });
