@@ -23,17 +23,24 @@ class PostsController < ApplicationController
 
   def destroy
     post = Post.find(params[:id])
-    post.destroy
-    redirect_to root_path
+    if post.destroy
+    redirect_to root_path,notice: '削除しました'
+    else
+    redirect_to post_path,alert:  '削除に失敗しました'
   end
+end
 
-  def edit; end
+  def edit
+  end
 
   def update
     post = Post.find(params[:id])
-    post.update(post_params)
-    redirect_to post_path
+    if post.update(post_params)
+    redirect_to post_path,notice:'編集しました'
+    else
+      redirect_to post_path,alert:  '編集に失敗しました'
   end
+end
 
   def show
     @lat = @post.latitude
