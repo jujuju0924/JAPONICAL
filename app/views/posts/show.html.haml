@@ -5,7 +5,7 @@
     - if user_signed_in? && current_user.id == @post.user_id
       .show__content__image__two
         .show__content__image__two__des
-          = link_to post_path(@post.id),method: :delete ,class: "mypage-image" do
+          = link_to post_path(@post.id),method: :delete ,class: "mypage-image",data: {confirm: "削除しますがよろしいですか？"} do
             =icon('fas','trash-alt')
         .show__content__image__two__des__edit
           = link_to edit_post_path(@post.id),method: :get,class: "mypage-edit" do
